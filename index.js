@@ -1,8 +1,9 @@
 const express = require('express')
 const app = express()
 
-const clientID = '7b76b39a4660b1faa24d'
-const clientSecret = '8a37d16ce8e276cd7bf1af81815f1047ba52802c'
+const authRouter = require('./Routers/auth/router')
+
+app.use(authRouter)
 
 const port = process.env.PORT || 4000
 
