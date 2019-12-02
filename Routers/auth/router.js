@@ -14,12 +14,12 @@ router.get('/home', (req, res) => {
     request
         .post(`https://github.com/login/oauth/access_token?client_id=${clientID}&client_secret=${clientSecret}&code=${requestToken}`)
         // Set the content type header, so that we get the response in JSON
-        .set('Accept', 'application/json')
+        // .set('Accept', 'application/json')
         .then(response => {
-            const accessToken = response.data.access_token
-            console.log(response.data)
+            const accessToken = response.body.access_token
+            console.log(response.body.access_token)
             // redirect the user to the home page, along with the access token
-        res.redirect(`/home.html?access_token=${accessToken}`)
+            res.redirect(`/home.html?access_token=${accessToken}`)
         })
 })
 
