@@ -1,5 +1,6 @@
 const request = require('superagent')
 const { Router } = require('express')
+const url = require('../../Constants/urls')
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config();
 }
@@ -20,7 +21,7 @@ router.get('/home', (req, res) => {
         .then(response => {
             const accessToken = response.body.access_token
             // redirect the user to the home page, along with the access token
-            res.redirect(`http://localhost:3000/home.html?access_token=${accessToken}`)  
+            res.redirect(`${url}/home.html?access_token=${accessToken}`)  
         })
 })
 
