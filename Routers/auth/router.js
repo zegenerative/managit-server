@@ -2,12 +2,9 @@ const request = require('superagent')
 require("dotenv").config()
 const { Router } = require('express')
 
-// const clientID = '7b76b39a4660b1faa24d'
-// const clientSecret = '8a37d16ce8e276cd7bf1af81815f1047ba52802c'
-
 const clientID = '7b76b39a4660b1faa24d'
-const clientSecret = process.env.SECRET
-console.log(process.env)
+const clientSecret = process.env.REACT_APP_SECRET
+console.log(process.env.REACT_APP_SECRET)
 
 const router = new Router()
 
