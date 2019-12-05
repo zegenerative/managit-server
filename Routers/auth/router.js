@@ -22,7 +22,7 @@ router.get('/home', (req, res) => {
             console.log(response.body.access_token)
             const accessToken = response.body.access_token
             // redirect the user to the home page, along with the access token
-            res.redirect(`${url}/home.html?access_token=${accessToken}`)  
+            res.redirect(`${url}/home?access_token=${accessToken}`)
         })
 })
 
