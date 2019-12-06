@@ -18,7 +18,6 @@ router.get('/home', (req, res) => {
         .post(`https://github.com/login/oauth/access_token?client_id=${clientID}&client_secret=${clientSecret}&code=${requestToken}`)
         .then(response => {
             const accessToken = response.body.access_token
-            // redirect the user to the home page, along with the access token
             res.redirect(`${url}/home?access_token=${accessToken}`)
         })
         .catch(err => console.log(err))
