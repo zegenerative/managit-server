@@ -21,8 +21,7 @@ router.get('/home', (req, res) => {
         .then(response => {
             const accessToken = response.body.access_token
             // redirect the user to the home page, along with the access token
-            res.send(accessToken)
-            res.redirect(`${url}/home`)
+            res.redirect(`${url}/home?access_token=${accessToken}`)
         })
         .catch(err => console.log(err))
 })
