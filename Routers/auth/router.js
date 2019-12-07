@@ -15,7 +15,7 @@ router.get('/home', (req, res) => {
     const requestToken = req.query.code
     
     request
-        .post(`https://github.com/login/oauth/access_token?client_id=${clientID}&client_secret=${clientSecret}&code=${requestToken}`)
+        .post(`https://github.com/login/oauth/access_token?client_id=${clientID}&client_secret=${clientSecret}&code=${requestToken}&scope=user,public_repo`)
         .then(response => {
             const accessToken = response.body.access_token
             res.redirect(`${url}/home?access_token=${accessToken}`)
