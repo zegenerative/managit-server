@@ -4,10 +4,9 @@
 Managit enables a user to manage their github repositories via OAuth.
 
 - **[Client](https://github.com/zegenerative/managit-client)**
-  The frontend part of the game.
+  The frontend part of the app.
 
 - **[Server](https://github.com/zegenerative/managit-server)**
-  Contains the endpoints and database models.
 
 ## Table of contents:
 
