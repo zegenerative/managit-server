@@ -21,8 +21,9 @@ Managit enables a user to manage their github repositories via OAuth.
 
 In the project directory
 
-2. When the project is cloned, the redirect url is managit-client.herokuapp.com/home, this can be changed to localhost.
-3. Run nodemon index or node index if you don't have nodemon to start the server
+2. Run npm install for necessary dependancies
+3. When the project is cloned, the redirect url is managit-client.herokuapp.com/home, this can be changed to localhost:4000.
+4. Run nodemon index or node index if you don't have nodemon to start the server
 
 For a more detailed overview of what’s completed and what still needs to be implemented check: (https://trello.com/b/5Jvtc4Me/managit)
 
